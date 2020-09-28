@@ -5,22 +5,19 @@ using System.Windows.Media.Imaging;
 
 namespace ViolaJonesWPF
 {
-    class Helper
+    public class Helper
     {
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        public static extern Boolean DeleteObject(IntPtr handle);
-
-        public static BitmapSource bs;
-        public static IntPtr ip;
+        private static extern Boolean DeleteObject(IntPtr handle);
 
         public static BitmapSource LoadBitmap(Bitmap source)
         {
-            ip = source.GetHbitmap();
-            bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip, IntPtr.Zero,
+            IntPtr intPtr = source.GetHbitmap();
+            BitmapSource bitmapSource = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(intPtr, IntPtr.Zero,
                 Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-            DeleteObject(ip);
+            DeleteObject(intPtr);
 
-            return bs;
+            return bitmapSource;
         }
     }
 }

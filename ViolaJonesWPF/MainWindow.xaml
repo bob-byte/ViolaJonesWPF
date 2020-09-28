@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViolaJonesWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="687" Width="1076">
+        Title="Recognising Road Signs" Height="687" Width="1076">
     <Grid Background="Black" Margin="0,0,-6.4,-0.4">
         <Grid.RowDefinitions>
             <RowDefinition Height="491*"/>

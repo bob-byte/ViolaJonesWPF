@@ -5,22 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViolaJonesWPF"
         mc:Ignorable="d"
-        Title="ChoiceXML" Height="450" Width="800" Background="DodgerBlue">
-    <Grid>
-        <Label Content="Висота 15, Ширина 15" HorizontalAlignment="Left" Margin="89,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="В каскадах тільки позитивні зображення" HorizontalAlignment="Left" Margin="263,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Висота 25, Ширина 25" HorizontalAlignment="Left" Margin="304,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Висота 35, Ширина 35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="505,43,0,0"/>
-        <Label Content="В каскадах позитивні і негативні зображення" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,320,0,0"/>
-        <RadioButton Checked="RB_15_5000_Checked" x:Name="RB_15_5000" Content="5000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="108,74,0,0"/>
-        <RadioButton Checked="RB_15_7000_Checked" x:Name="RB_15_7000" Content="7000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="108,107,0,0"/>
-        <RadioButton Checked="RB_25_5000_Checked" x:Name="RB_25_5000"  Content="5000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="323,77,0,0"/>
-        <RadioButton Checked="RB_25_7000_Checked" x:Name="RB_25_7000" Content="7000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="323,110,0,0"/>
-        <RadioButton Checked="RB_25_10000_Checked" x:Name="RB_25_10000" Content="10000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="323,143,0,0"/>
-        <RadioButton Checked="RB_25_15000_Checked" x:Name="RB_25_15000" Content="15000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="323,173,0,0"/>
-        <RadioButton Checked="RB_35_5000_Checked" x:Name="RB_35_5000" Content="5000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="529,74,0,0"/>
-        <RadioButton Checked="RB_35_7000_Checked" x:Name="RB_35_7000" Content="7000 зразків" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="529,107,0,0"/>
-        <Button Click="Button_Click" Content="Вибрати" HorizontalAlignment="Left" Margin="666,173,0,0" VerticalAlignment="Top" Width="101" Height="56"/>
+        Title="Choice cascade" Height="349.243" Width="878.428" Background="DodgerBlue" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="0,0,4,-0.2" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox FontSize="16" Background="DodgerBlue" Foreground="Black" TextAlignment="Center" TextWrapping="WrapWithOverflow" Grid.Column="1" Margin="0.4,10,0.2,0.2">
+            Next cascades use many 'positive' and 1 'negative' images
+        </TextBox>
+        <Label Grid.Row="1" Grid.Column="0" Content="Height 15, Width 15" HorizontalAlignment="Left" Margin="61,9.8,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Height 25, Width 25" HorizontalAlignment="Left" Margin="64.4,9.8,0,0" VerticalAlignment="Top" Width="152" FontSize="16"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="Height 35, Width 35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="65.8,9.8,0,0" FontSize="16"/>
+        <RadioButton Grid.Row="1" Grid.Column="0" Checked="RB_15_5000_Checked" x:Name="RB_15_5000" Content="5000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,38.8,0,0" FontSize="16"/>
+        <RadioButton Grid.Row="1" Grid.Column="0" Checked="RB_15_7000_Checked" x:Name="RB_15_7000" Content="7000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,70.8,0,0" FontSize="16"/>
+        <RadioButton Grid.Row="1" Grid.Column="1" Checked="RB_25_5000_Checked" x:Name="RB_25_5000"  Content="5000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,38.8,0,0" FontSize="16"/>
+        <RadioButton Grid.Row="1" Grid.Column="1" Checked="RB_25_7000_Checked" x:Name="RB_25_7000" Content="7000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72.4,70.8,0,0" FontSize="16" />
+        <RadioButton Grid.Row="1" Grid.Column="1" Checked="RB_25_10000_Checked" x:Name="RB_25_10000" Content="10000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72.4,99.8,0,0" FontSize="16" />
+        <RadioButton Grid.Row="1" Grid.Column="1" Checked="RB_25_15000_Checked" x:Name="RB_25_15000" Content="15000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72.4,125.8,0,0" FontSize="16" />
+        <RadioButton Checked="RB_35_5000_Checked" x:Name="RB_35_5000" Content="5000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75.8,35.8,0,0" Grid.Column="2" Height="18" Grid.Row="1" Width="117" FontSize="16"/>
+        <RadioButton Checked="RB_35_7000_Checked" x:Name="RB_35_7000" Content="7000 samples" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75.8,68.8,0,0" Grid.Column="2" Height="18" Grid.Row="1" Width="117" FontSize="16"/>
+        <Button Background="Black" Foreground="DodgerBlue" Click="Select_Click" Content="Select" HorizontalAlignment="Left" Margin="61,99.8,0,0" VerticalAlignment="Top" Width="157" Height="60" Grid.Row="1" FontSize="16"/>
+        <Label Content="Using many 'negative' images" HorizontalAlignment="Left" Margin="39.4,0,0,0" VerticalAlignment="Top" Height="42" Grid.Row="2" Width="269" Grid.Column="1" FontSize="16" Grid.ColumnSpan="2"/>
+        <RadioButton Checked="RB_25_5000_3000_Checked" x:Name="RB_25_5000_3000" HorizontalAlignment="Left" Margin="10.4,30,0,0" VerticalAlignment="Top" Height="50" Grid.Row="2" Width="279" Grid.Column="1" FontSize="16">
+            <TextBox Background="DodgerBlue" Foreground="Black" TextWrapping="Wrap" Width="258" Height="50" FontSize="16">5000 'positive' images and 3000 'negative' images
+            </TextBox>
+        </RadioButton>
+        <Button Click="Cancel_Click" Background="Black" Foreground="DodgerBlue" Content="Cancel" HorizontalAlignment="Left" Margin="65.8,99.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="157" Height="60" Grid.Column="2" FontSize="16"/>
 
 
     </Grid>
