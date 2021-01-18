@@ -78,6 +78,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataImages.cs" />
+    <Compile Include="PrecisionRecognition.cs" />
     <Compile Include="RecogniseRoadSigns.cs" />
     <Page Include="ChoiceXML.xaml">
       <SubType>Designer</SubType>
@@ -137,6 +139,9 @@
     <Resource Include="HaarCascade\cascade%28-w 25 -h 25, 7000pos, 1neg%29.xml" />
     <Resource Include="HaarCascade\cascade%28-w 35 -h 35, 5000pos, 1neg%29.xml" />
     <Resource Include="HaarCascade\cascade%28-w 35 -h 35, 7000pos, 1neg%29.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HaarCascade\cascade%28-w 25 -h 25, 5000pos, 3000neg%29.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

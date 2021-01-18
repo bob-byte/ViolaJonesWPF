@@ -66,8 +66,8 @@ namespace ViolaJonesWPF
             }
             else
             {
-                MainWindow.MinNeighbors = 6;
-                MainWindow.ScaleFactor = 1.3;
+                MainWindow.MinNeighbors = 5;
+                MainWindow.ScaleFactor = 1.6;
             }
             Close();
         }
