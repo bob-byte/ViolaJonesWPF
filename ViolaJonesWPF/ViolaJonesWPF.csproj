@@ -96,7 +96,7 @@
     <Compile Include="ChoiceXML.xaml.cs">
       <DependentUpon>ChoiceXML.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="ConvertToBitmapSource.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

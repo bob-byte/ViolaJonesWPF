@@ -41,7 +41,7 @@ namespace ViolaJonesWPF
             if (findImage == true)
             {
                 image = new Image<Bgr, Byte>(openImage.FileName);
-                pictureBox1.Source = Helper.LoadBitmap(image.ToBitmap());
+                pictureBox1.Source = ConvertToBitmapSource.LoadBitmap(image.ToBitmap());
                 isDrawnRects = false;
             }
         }
@@ -127,7 +127,7 @@ namespace ViolaJonesWPF
                 DrawRects(roadSignsRects, image.Bitmap);
                 Dispatcher.Invoke(() =>
                 {
-                    pictureBox1.Source = Helper.LoadBitmap(image.Bitmap);
+                    pictureBox1.Source = ConvertToBitmapSource.LoadBitmap(image.Bitmap);
                 });
 
                 isDrawnRects = true;
