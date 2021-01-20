@@ -79,6 +79,7 @@ namespace ViolaJonesWPF
 
                     dataImages.ParseDataFromDescriptionRoadSigns(data, amountSign,
                         out Int32[] topRow, out Int32[] leftCol, out Int32[] bottomRow, out Int32[] rightCol);
+
                     Int32 amountRightRects = precisionRecog.GetAmountRightRect(roadSignsRects, 0.4, topRow, leftCol, bottomRow, rightCol);
                     Int32 wrongCountSigns = roadSignsRects.Length - amountRightRects;
 
@@ -166,6 +167,7 @@ namespace ViolaJonesWPF
                 {
                     Priority = ThreadPriority.Highest
                 };
+
                 threadDrawRects.Start();
             }
             catch (Exception ex)

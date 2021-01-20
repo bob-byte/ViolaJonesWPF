@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ViolaJonesWPF
 {
     class DataImages
     {
-        public void ReadTextFile(String nameTextFile, String nameImage, List<String> data, out Boolean isRightRecord, out Int32 amountSign)
+        public void ReadTextFile(String nameTextFile, String nameImage, List<String> data, 
+            out Boolean isRightRecord, out Int32 amountSign)
         {
             using (StreamReader sr = new StreamReader(nameTextFile))
             {
@@ -47,6 +44,7 @@ namespace ViolaJonesWPF
                         data.Add(arrayData[4]);
 
                         amountSign++;
+
                         if (sr.Peek() >= 0)
                         {
                             textRow = sr.ReadLine();

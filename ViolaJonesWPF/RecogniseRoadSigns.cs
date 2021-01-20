@@ -1,16 +1,14 @@
 ﻿using Emgu.CV;
 using Emgu.CV.Structure;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Windows.Threading;
 
 namespace ViolaJonesWPF
 {
     public class RecogniseRoadSigns
     {
-        public void RecogniseSigns(CascadeClassifier cascadeClassifier, Image<Bgr, Byte> image, Double scaleFactor, Int32 minNeighbors, 
+        public void RecogniseSigns(CascadeClassifier cascadeClassifier, Image<Bgr, Byte> image, 
+            Double scaleFactor, Int32 minNeighbors, 
             out Rectangle[] rects, out TimeSpan timeRecognition)
         {
             try
