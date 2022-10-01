@@ -15,7 +15,8 @@
             <MenuItem Header="File" Height="37" Width="31" HorizontalAlignment="Stretch">
                 <MenuItem Click="SelectImage_Click" x:Name="SelectImage" Header="Select an image" Margin="0,0,-0.4,0" Background="Black" Foreground="Green"/>
                 <MenuItem Click="SelectTestSet_Click" x:Name="SelectTestSet" Header="Select a test set" Background="Black" Foreground="Green"/>
-                <MenuItem Click="SelectXML_Click" x:Name="SelectXML" Header="Select a file .xml" Background="Black" Foreground="Green"/>
+                <MenuItem Click="SelectResearchedCascade_Click" x:Name="SelectXML" Header="Select a researched cascade" Background="Black" Foreground="Green"/>
+                <MenuItem Click="SelectOwnCascade_Click" x:Name="SelectOwnCascade" Header="Select a own cascade" Background="Black" Foreground="Green"/>
             </MenuItem>
         </Menu>
         <Border BorderBrush="Green" BorderThickness="3" 

@@ -7,24 +7,22 @@ namespace ViolaJonesWPF
 {
     public class RecogniseRoadSigns
     {
-        public void RecogniseSigns(CascadeClassifier cascadeClassifier, Image<Bgr, Byte> image, 
-            Double scaleFactor, Int32 minNeighbors, 
-            out Rectangle[] rects, out TimeSpan timeRecognition)
-        {
-            try
-            {
-                Bitmap bitmap = image.ToBitmap();
-                Image<Bgr, Byte> grayImage = new Image<Bgr, Byte>(bitmap);
+        public void RecogniseSigns<TColor, TDepth>(
+            CascadeClassifier cascadeClassifier, 
+            Image<TColor, TDepth> image, 
+            Double scaleFactor, 
+            Int32 minNeighbors, 
+            out Rectangle[] rects, 
+            out TimeSpan timeRecognition)
 
-                DateTime start = new DateTime();
-                start = DateTime.Now;
-                rects = cascadeClassifier.DetectMultiScale(grayImage, scaleFactor, minNeighbors);
-                timeRecognition = DateTime.Now.Subtract(start);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            where TColor : struct, IColor 
+            where TDepth : new()
+        {
+            var grayImage = new Image<Gray, TDepth>(image.Bitmap);
+
+            DateTime start = DateTime.Now;
+            rects = cascadeClassifier.DetectMultiScale(grayImage, scaleFactor, minNeighbors);
+            timeRecognition = DateTime.Now.Subtract(start);
         }
     }
 }

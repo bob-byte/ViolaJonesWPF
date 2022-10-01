@@ -1,42 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace ViolaJonesWPF
 {
-    class DataImages
+    class ImageData
     {
         public void ReadTextFile(String nameTextFile, String nameImage, List<String> data, 
             out Boolean isRightRecord, out Int32 amountSign)
         {
             using (StreamReader sr = new StreamReader(nameTextFile))
             {
-                String shortNameFile;
-                String[] arrayData;
-
                 isRightRecord = false;
                 amountSign = 0;
 
                 while (sr.Peek() >= 0)
                 {
                     String textRow = sr.ReadLine();
-                    shortNameFile = "";
+                    Int32 symbolsOfParCount = textRow.IndexOf(';') - 1;
 
-                    Int32 i = textRow.IndexOf(';') - 1;
-                    for (Int32 j = 0; j <= i; j++)
+                    var shortNameFile = new StringBuilder(capacity: symbolsOfParCount);
+                    for (Int32 numSymbol = 0; numSymbol <= symbolsOfParCount; numSymbol++)
                     {
-                        shortNameFile += textRow[j];
+                        shortNameFile.Append(textRow[numSymbol]);
                     }
 
-                    if (nameImage == shortNameFile)
-                    {
-                        isRightRecord = true;
-                    }
-
+                    isRightRecord = nameImage.Equals(shortNameFile.ToString(), StringComparison.OrdinalIgnoreCase);
                     while (isRightRecord)
                     {
-                        arrayData = new String[6];
-                        arrayData = textRow.Split(';');
+                        String[] arrayData = textRow.Split(';');
 
                         data.Add(arrayData[1]);
                         data.Add(arrayData[2]);
@@ -48,15 +41,15 @@ namespace ViolaJonesWPF
                         if (sr.Peek() >= 0)
                         {
                             textRow = sr.ReadLine();
-                            i = textRow.IndexOf(';') - 1;
-                            shortNameFile = "";
+                            symbolsOfParCount = textRow.IndexOf(';') - 1;
+                            shortNameFile = new StringBuilder(capacity: symbolsOfParCount);
 
-                            for (Int32 j = 0; j <= i; j++)
+                            for (Int32 numSymbol = 0; numSymbol <= symbolsOfParCount; numSymbol++)
                             {
-                                shortNameFile += textRow[j];
+                                shortNameFile.Append(textRow[numSymbol]);
                             }
 
-                            if (nameImage != shortNameFile)
+                            if (!nameImage.Equals(shortNameFile.ToString(), StringComparison.OrdinalIgnoreCase))
                             {
                                 return;
                             }
