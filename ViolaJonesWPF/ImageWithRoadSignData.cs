@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ViolaJonesWPF
 {
-    class ImageData
+    class ImageWithRoadSignData
     {
         public void ReadTextFile(String nameTextFile, String nameImage, List<String> data, 
             out Boolean isRightRecord, out Int32 amountSign)

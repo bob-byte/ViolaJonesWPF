@@ -79,7 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataImages.cs" />
+    <Compile Include="ImageWithRoadSignData.cs" />
     <Compile Include="PrecisionRecognition.cs" />
     <Compile Include="RecogniseRoadSigns.cs" />
     <Page Include="ChoiceXML.xaml">

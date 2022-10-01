@@ -19,7 +19,7 @@ namespace ViolaJonesWPF
     public partial class MainWindow : Window
     {
         private readonly RecogniseRoadSigns m_recognise = new RecogniseRoadSigns();
-        private ImageData m_dataImages = new ImageData();
+        private ImageWithRoadSignData m_dataImages = new ImageWithRoadSignData();
         private PrecisionRecognition m_precisionRecog = new PrecisionRecognition();
         private OpenFileDialog m_openImage, m_openDataSet;
         private Image<Bgr, Byte> m_image;
