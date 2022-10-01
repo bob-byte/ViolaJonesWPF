@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29905.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViolaJonesWPF", "ViolaJonesWPF\ViolaJonesWPF.csproj", "{3235D113-C652-478A-B6A6-1D9BE419E095}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenameImagesANDCreateNegImagesFile", "..\RenameImagesANDCreateNegImagesFile\RenameImagesANDCreateNegImagesFile\RenameImagesANDCreateNegImagesFile.csproj", "{C52AC1AF-CAF5-411A-BCCB-5F126C740D98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{3235D113-C652-478A-B6A6-1D9BE419E095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3235D113-C652-478A-B6A6-1D9BE419E095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3235D113-C652-478A-B6A6-1D9BE419E095}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C52AC1AF-CAF5-411A-BCCB-5F126C740D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C52AC1AF-CAF5-411A-BCCB-5F126C740D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C52AC1AF-CAF5-411A-BCCB-5F126C740D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C52AC1AF-CAF5-411A-BCCB-5F126C740D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
